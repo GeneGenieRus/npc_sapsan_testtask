@@ -1,31 +1,9 @@
-= Example
+= Задача
 
-image:https://img.shields.io/badge/vert.x-4.0.0-milestone3-purple.svg[link="https://vertx.io"]
+Необходимо реализовать веб-приложение, которое принимает POST запрос на произвольный эндпоинт с body (содержащим текст) и возвращает ответом перевернутый текст содержащийся в body запроса.
+ 
+Внутри веб-приложения должен быть основной вертикл (MainVerticle), который принимает POST запросы от клиента и деплоит второй вертикл (ReverseVerticle), который в свою очередь должен получить текст (здесь будьте внимательны, нельзя просто так передавать данные между вертиклами) и перевернуть его, далее отправить обратно на MainVerticle. После получения перевернутой строки, mainVerticle должен дать response с этой строкой внутри body.
 
-This application was generated using http://start.vertx.io
+= Реализация
 
-== Building
-
-To launch your tests:
-```
-./gradlew clean test
-```
-
-To package your application:
-```
-./gradlew clean assemble
-```
-
-To run your application:
-```
-./gradlew clean run
-```
-
-== Help
-
-* https://vertx.io/docs/[Vert.x Documentation]
-* https://stackoverflow.com/questions/tagged/vert.x?sort=newest&pageSize=15[Vert.x Stack Overflow]
-* https://groups.google.com/forum/?fromgroups#!forum/vertx[Vert.x User Group]
-* https://gitter.im/eclipse-vertx/vertx-users[Vert.x Gitter]
-
-
+Java 8, Vert.x, Gradle. Для выполнения приложения запустить метод **main()** класса **MainVerticle**
